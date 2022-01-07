@@ -23,7 +23,7 @@
 	<div class="container my-5">
 		<div class="row mb-3">
 			<div class="col-md-6">
-				<div class="p-3 bg-light round">
+				<div class="p-3 bg-secondary round">
 					<div class="row">
 						<div class="col p-4">
 							<p class="text-start fw-bold" style="font-size:25px;">Fruit</p>
@@ -37,7 +37,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="p-3 bg-light round">
+				<div class="p-3 bg-secondary round">
 					<div class="row">
 						<div class="col p-4">
 							<p class="text-start fw-bold" style="font-size:25px;">Vegetable</p>
@@ -53,7 +53,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6">
-				<div class="p-3 bg-light round">
+				<div class="p-3 bg-secondary round">
 					<div class="row">
 						<div class="col p-4">
 							<p class="text-start fw-bold" style="font-size:25px;">New Item</p>
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="p-3 bg-light round">
+				<div class="p-3 bg-secondary round">
 					<div class="row">
 						<div class="col p-4">
 							<p class="text-start fw-bold" style="font-size:25px;">Dairy Products</p>
@@ -96,7 +96,7 @@
 					<div class="card-body">
 						<h5 class="card-title">Special title treatment</h5>
 						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
+						<a href="/detail" class="btn btn-primary">Go somewhere</a>
 					</div>
 				</div>
 			</div>
@@ -159,46 +159,46 @@
 <section id="Promo">
 	<div class="container my-5 py-5">
 		<p class="fw-bold">Promo</p>
-		<div class="horizontal-scrollable">
-			<div class="row-3 d-flex flex-lg-nowrap overflow-auto">
-				<div class="col-sm-4 mx-3 bg-light round">
-					<div class="card bg-light" style="border: none;">
-						<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Special title treatment</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
+	</div>
+	<div class="ms-5">
+		<div class="row-3 d-flex flex-lg-nowrap overflow-auto">
+			<div class="col-sm-4 mx-3 bg-light round">
+				<div class="card bg-secondary" style="border: none;">
+					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Special title treatment</h5>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
 					</div>
 				</div>
-				<div class="col-sm-4 mx-3 bg-light round">
-					<div class="card bg-light" style="border: none;">
-						<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Special title treatment</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
+			</div>
+			<div class="col-sm-4 mx-3 bg-secondary round">
+				<div class="card bg-secondary" style="border: none;">
+					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Special title treatment</h5>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
 					</div>
 				</div>
-				<div class="col-sm-4 mx-3 bg-light round">
-					<div class="card bg-light" style="border: none;">
-						<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Special title treatment</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
+			</div>
+			<div class="col-sm-4 mx-3 bg-secondary round">
+				<div class="card bg-secondary" style="border: none;">
+					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Special title treatment</h5>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
 					</div>
 				</div>
-				<div class="col-sm-4 mx-3 bg-light round">
-					<div class="card bg-light" style="border: none;">
-						<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Special title treatment</h5>
-							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
+			</div>
+			<div class="col-sm-4 mx-3 bg-secondary round">
+				<div class="card bg-secondary" style="border: none;">
+					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Special title treatment</h5>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
 					</div>
 				</div>
 			</div>

@@ -34,7 +34,7 @@
 				padding-top: 200px;
 			}
 
-			div.round{
+			.round{
 				border-radius: 15px;
 			}
 			p.header-text{
@@ -87,7 +87,7 @@
 		@yield('content')
 
 		<section id="footer">
-			<div class="container">
+			<div class="container my-5">
 				<div class="row">
 					<div class="col-md-5">
 						<h5>Contact Us</h5>
@@ -96,7 +96,7 @@
 						<p><b>Follow Our Social Media</b><br>
 							<i class="fab fa-instagram"></i>
 							<i class="fab fa-youtube"></i>
-							<i class="fab fa-twitter-square"></i>
+							<i class="fab fa-twitter"></i>
 						</p>
 					</div>
 					<div class="col-md-4 me-4">

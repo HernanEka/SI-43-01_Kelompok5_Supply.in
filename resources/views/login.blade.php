@@ -11,7 +11,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-7"></div>
+			<div class="col-md-7">&nbsp;</div>
 			<div class="col-md-5">
 				<div class="text-end py-5 my-4">
 					<p><h1 class="display-3 fw-bold mb-5" style="color: white;">Supply.in</h1></p>
