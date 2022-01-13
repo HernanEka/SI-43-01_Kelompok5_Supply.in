@@ -22,9 +22,7 @@ use App\Models\User;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::resource('/', KategoriController::class);
 
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest');

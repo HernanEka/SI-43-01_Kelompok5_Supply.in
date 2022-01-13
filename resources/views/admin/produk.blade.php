@@ -14,6 +14,7 @@
 				<th scope="col">Nama Produk</th>
 				<th scope="col">Harga</th>
 				<th scope="col">Stock</th>
+				<th scope="col">Info Tambahan</th>
 				<th scope="col">Kategori</th>
 				<th scope="col">Gambar</th>
 				<th scope="col">Action</th>
@@ -25,8 +26,9 @@
 				<td scope="col">{{ $i++ }}</td>
 				<td>{{ $data->id }}</td>
 				<td>{{ $data->nama_product }}</td>
-				<td>Rp {{ number_format($data->harga) }}/kg</td>
-				<td>{{ $data->stock }} Kg</td>
+				<td>Rp {{ number_format($data->harga) }}/{{ $data->unit }}</td>
+				<td>{{ $data->stock }} {{ $data->unit }}</td>
+				<td style="width: 250px;">{{Str::limit($data->deskripsi, 50)}}</td>
 				<td>{{ $data->kategori }}</td>
 				<td><img src="{{ asset('storage/' . $data->gambar) }}" width="50" class="thumbnail zoom"></td>
 				<td>

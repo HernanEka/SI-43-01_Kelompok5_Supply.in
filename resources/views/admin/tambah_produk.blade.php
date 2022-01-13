@@ -12,12 +12,21 @@
 			<input type="text" name="nama_product" class="form-control" id="nama" placeholder="Nama Produk" required>
 		</div>
 		<div class="mb-3">
-			<label for="harga" class="form-label">Harga Produk/Kg</label>
+			<label for="harga" class="form-label">Harga Produk</label>
 			<input type="number" name="harga" class="form-control" id="harga" placeholder="Harga Produk" required>
 		</div>
 		<div class="mb-3">
 			<label for="stock" class="form-label">Stock Product</label>
 			<input type="number" name="stock" class="form-control" id="stock" placeholder="Stock Product" required>
+		</div>
+		<div class="mb-3">
+			<label for="unit" class="form-label">Unit Produk</label>
+			<select name="unit" id="unit" class="form-select" required>
+				<option selected disabled hidden>Pilih Satuan Unit Produk</option>
+				<option>Kg</option>
+				<option>Box</option>
+				<option>Ikat</option>
+			</select>
 		</div>
 		<div class="mb-3">
 			<label for="kategori" class="form-label">Kategori Produk</label>

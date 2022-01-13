@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('deskripsi');
             $table->integer('harga');
             $table->integer('stock');
+            $table->string('unit');
             $table->string('kategori');
             $table->string('gambar');
             $table->timestamps();

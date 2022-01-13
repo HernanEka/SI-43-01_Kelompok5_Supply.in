@@ -45,6 +45,7 @@ class ProdukController extends Controller
         $produk->deskripsi = $request->deskripsi;
         $produk->harga = $request->harga;
         $produk->stock = $request->stock;
+        $produk->unit = $request->unit;
         $produk->kategori = $request->kategori;
         $produk->gambar = $request->file('gambar')->store('foto-product');
         

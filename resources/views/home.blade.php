@@ -90,46 +90,23 @@
 	</div>
 	<div class="container-fluid pb-5 mb-5">
 		<div class="row-3 d-flex flex-lg-nowrap overflow-auto">
-			<div class="col-sm-3 p-3 mx-3 bg-light round">
-				<div class="card bg-light" style="border: none;">
-					<img src="src/web-toolkit/filler.png" class="card-img-top rounded-start" alt="...">
+			@foreach($produk as $data)
+			<div class="col-md-3 p-3 mx-3 bg-light round">
+				<div class="card h-100 bg-light" style="border: none;">
+					<div style="background-color: white; min-height: 300px;">
+						<img src="{{ asset('storage/'. $data->gambar) }}" class="card-img-top rounded-start" alt="...">
+					</div>
 					<div class="card-body">
-						<h5 class="card-title">Special title treatment</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="/detail" class="btn btn-primary">Go somewhere</a>
+						<h5 class="card-title text-center">{{ $data->nama_product }}</h5>
+						<p class="card-subtitle text-center">Rp {{ number_format($data->harga) }}/{{ $data->unit }}</p>.
+						<p class="card-text">{{Str::limit($data->deskripsi, 50)}}</p>
+					</div>
+					<div class="card-footer">
+						<a href="/detail" class="btn btn-primary w-100">Beli</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3 p-3 mx-3 bg-light round">
-				<div class="card bg-light" style="border: none;">
-					<img src="src/web-toolkit/filler.png" class="card-img-top rounded-start" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Special title treatment</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-3 p-3 mx-3 bg-light round">
-				<div class="card bg-light" style="border: none;">
-					<img src="src/web-toolkit/filler.png" class="card-img-top rounded-start" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Special title treatment</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-3 p-3 mx-3 bg-light round">
-				<div class="card bg-light" style="border: none;">
-					<img src="src/web-toolkit/filler.png" class="card-img-top rounded-start" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Special title treatment</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 </section>
