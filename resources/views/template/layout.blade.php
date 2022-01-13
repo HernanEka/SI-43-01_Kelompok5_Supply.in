@@ -41,6 +41,19 @@
 				font-size: 22px;
 			}
 
+			a div.bg-kategori{
+				background-color: #ddd;
+				border-radius: 20px;
+				color: #111;
+			}
+
+			a div.bg-kategori:hover{
+				background-color: #ccc;
+				border-radius: 20px;
+				color: #111;
+				transition-duration: 0.7s;
+			}
+
 		</style>
 
 		<title>Supply.in</title>

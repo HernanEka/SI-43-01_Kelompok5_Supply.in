@@ -71,14 +71,9 @@
 												<input type="text" name="" class="form-control" placeholder="Lastname">
 											</div>
 										</div>
-										<div class="row mb-2 text-start">
+										<div class="mb-2 text-start">
 											<label class="form-label">Phone Number</label>
-											<div class="col-md-2">
-												<input type="text" name="" class="form-control" placeholder="+62">
-											</div>
-											<div class="col-md-10">
-												<input type="text" name="" class="form-control" placeholder="8976543210">
-											</div>
+											<input type="number" name="" class="form-control" placeholder="081234567891">
 										</div>
 										<div class="mb-2 text-start">
 											<label class="form-label">Email</label>

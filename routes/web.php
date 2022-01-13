@@ -22,6 +22,12 @@ Route::get('/login', function () {
     return view('login');
 });
 
+
 Route::get('/detail', function () {
     return view('detail');
 });
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+

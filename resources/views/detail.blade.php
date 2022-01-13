@@ -31,6 +31,9 @@
 						</tr>
 					</tbody>
 				</table>
+				<div class="text-center">
+					<a href="#" class="btn btn-secondary">Beli</a>
+				</div>
 			</div>
 		</div>
 		<div class="row my-5">
