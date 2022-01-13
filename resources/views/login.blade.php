@@ -8,6 +8,26 @@
 
 	@section('content')
 
+	@error('password')
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		{{ $message }}
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	@enderror
+
+	@if(session()->has('gagal'))
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		{{ session('gagal') }}
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	@endif
+
+	@if(session()->has('success'))
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		{{ session('success') }}
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	@endif
 
 	<div class="container">
 		<div class="row">
@@ -34,18 +54,19 @@
 									<h5 class="modal-title" id="staticBackdropLabel">Login</h5>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
-								<form action="/" method="get">
+								<form action="/login" method="post">
+									@csrf
 									<div class="modal-body">
 										<div class="mb-2">
-											<input type="text" name="" class="form-control" placeholder="Email">
+											<input type="email" name="email" class="form-control" placeholder="Email" required>
 										</div>
 										<div class="mb-2">
-											<input type="password" name="" class="form-control" placeholder="Password">
+											<input type="password" name="password" class="form-control" placeholder="Password" required>
 										</div>
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-										<button type="sumbit" class="btn btn-primary">Understood</button>
+										<button type="sumbit" class="btn btn-primary">Login</button>
 									</div>
 								</form>
 							</div>
@@ -60,33 +81,33 @@
 									<h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
-								<form action="/" method="get">
+								<form action="/register" method="post">
+									@csrf
 									<div class="modal-body">
-										<div class="row mb-2 text-start">
+										<div class="mb-2 text-start">
 											<label class="form-label">Fullname</label>
-											<div class="col-md-6">
-												<input type="text" name="" class="form-control" placeholder="Firstname">
-											</div>
-											<div class="col-md-6">
-												<input type="text" name="" class="form-control" placeholder="Lastname">
-											</div>
+											<input type="text" name="nama_user" class="form-control" placeholder="Firstname" required>
 										</div>
 										<div class="mb-2 text-start">
 											<label class="form-label">Phone Number</label>
-											<input type="number" name="" class="form-control" placeholder="081234567891">
+											<input type="number" name="phone" class="form-control" placeholder="081234567891"required>
+										</div>
+										<div class="mb-2 text-start">
+											<label class="form-label">Alamat</label>
+											<textarea class="form-control" name="address" rows="3" placeholder="Jl. A.Djaelani ..." required></textarea>
 										</div>
 										<div class="mb-2 text-start">
 											<label class="form-label">Email</label>
-											<input type="email" name="" class="form-control" placeholder="customer@supply.com">
+											<input type="email" name="email" class="form-control" placeholder="customer@supply.com" required>
 										</div>
 										<div class="mb-2 text-start">
 											<label class="form-label">Password</label>
-											<input type="password" name="" class="form-control" placeholder="Minimal 8 Character">
+											<input type="password" name="password" class="form-control" placeholder="Minimal 8 Character" required>
 										</div>
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-										<button type="sumbit" class="btn btn-primary">Understood</button>
+										<button type="sumbit" class="btn btn-primary">Sing Up</button>
 									</div>
 								</form>
 							</div>

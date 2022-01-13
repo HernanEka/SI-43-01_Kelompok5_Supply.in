@@ -157,12 +157,12 @@
 	</div>
 </section>
 <section id="Promo">
-	<div class="container my-5 py-5">
-		<p class="fw-bold">Promo</p>
+	<div class="container mt-5 pt-5">
+		<h5 class="fw-bold">Promo</h5>
 	</div>
 	<div class="container-fluid">
 		<div class="row d-flex flex-lg-nowrap overflow-auto">
-			<div class="col-sm-4 mx-3 bg-light round">
+			<div class="col-sm-4 mx-3">
 				<div class="card bg-secondary" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
@@ -172,7 +172,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4 mx-3 bg-secondary round">
+			<div class="col-sm-4 mx-3">
 				<div class="card bg-secondary" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
@@ -182,7 +182,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4 mx-3 bg-secondary round">
+			<div class="col-sm-4 mx-3">
 				<div class="card bg-secondary" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
@@ -192,7 +192,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4 mx-3 bg-secondary round">
+			<div class="col-sm-4 mx-3">
 				<div class="card bg-secondary" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">

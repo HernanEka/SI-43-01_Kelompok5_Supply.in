@@ -54,6 +54,12 @@
 				transition-duration: 0.7s;
 			}
 
+			
+			.search{
+				border-radius: 10px;
+				border: none;
+			}
+
 		</style>
 
 		<title>Supply.in</title>
@@ -69,17 +75,37 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mx-3 mb-lg-0" style="font-size: 20px;">
 						<li class="nav-item">
-							<a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link"><i class="fas fa-search"></i></a>
-						</li>
+							<form class="d-flex p-1 bg-light search">
+								<input class="form-control search bg-light" type="search" placeholder="Search" aria-label="Search">
+								<button class="btn" type="submit"><i class="fas fa-search"></i></button>
+							</form>
 						<li class="nav-item">
 							<a href="#" class="nav-link"><i class="fas fa-map-marker-alt"></i></a>
+						@auth
 						</li>
 						<li class="nav-item">
 							<a href="#" class="nav-link"><i class="far fa-heart"></i></a>
 						</li>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+						</li>
+						<li class="nav-item">
+							<div class="dropdown">
+								<a class="nav-link btn btn-primary text-light" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="far fa-user"></i>
+									@if(session()->has('id'))
+									
+									Hallo, {{ session('nama') }} 
+
+									@endif
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+									<li><a class="dropdown-item" href="/logout">Logout</a></li>
+								</ul>
+							</div>
+						</li>
+						@else
 						<li class="nav-item">
 							<div class="dropdown">
 								<a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -91,6 +117,7 @@
 								</ul>
 							</div>
 						</li>
+						@endauth
 					</ul>
 				</div>
 			</div>
