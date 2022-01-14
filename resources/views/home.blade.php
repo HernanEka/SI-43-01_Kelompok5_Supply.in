@@ -23,7 +23,7 @@
 	<div class="container my-5">
 		<div class="row mb-3">
 			<div class="col-md-6 px-4">
-				<a href="/produk/fruit" style="text-decoration:none;">
+				<a href="/produk/Buah" style="text-decoration:none;">
 					<div class="row px-3 bg-kategori">
 						<div class="col p-3">
 							<p class="text-start fw-bold py-4 px-2" style="font-size:25px;">Fruit</p>
@@ -37,7 +37,7 @@
 				</a>
 			</div>
 			<div class="col-md-6 px-4">
-				<a href="/vegetable" style="text-decoration:none;">
+				<a href="/produk/Sayur" style="text-decoration:none;">
 					<div class="row px-3 bg-kategori">
 						<div class="col p-3">
 							<p class="text-start fw-bold py-4 px-2" style="font-size:25px;">Vegetable</p>
@@ -53,7 +53,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6 px-4">
-				<a href="/new-item" style="text-decoration:none;">
+				<a href="/produk" style="text-decoration:none;">
 					<div class="row px-3 bg-kategori">
 						<div class="col p-3">
 							<p class="text-start fw-bold py-4 px-2" style="font-size:25px;">New Item</p>
@@ -67,7 +67,7 @@
 				</a>
 			</div>
 			<div class="col-md-6 px-4">
-				<a href="/dairy-product" style="text-decoration:none;">
+				<a href="/produk/Dairy Product" style="text-decoration:none;">
 					<div class="row px-3 bg-kategori">
 						<div class="col p-3">
 							<p class="text-start fw-bold py-4 px-2" style="font-size:25px;">Dairy Product</p>
@@ -102,7 +102,7 @@
 						<p class="card-text">{{Str::limit($data->deskripsi, 50)}}</p>
 					</div>
 					<div class="card-footer">
-						<a href="/detail" class="btn btn-primary w-100">Beli</a>
+						<a href="/detail/{{$data->id}}" class="btn btn-primary w-100">Beli</a>
 					</div>
 				</div>
 			</div>

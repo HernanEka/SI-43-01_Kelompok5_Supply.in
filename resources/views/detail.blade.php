@@ -6,34 +6,41 @@
 	<div class="container py-5 my-5">
 		<div class="row">
 			<div class="col-md-6">
-				<img src="src/web-toolkit/filler.png" class="img-fluid">
+				<img src="{{ asset('storage/'. $produk->gambar) }}" class="img-fluid">
 			</div>
+
 			<div class="col-md-6">
-				<p class="tittle">Summerville</p>
-				<h2 class="fw-bold">Bayam Merah</h2>
-				<table class="table round">
-					<thead class="table-dark">
-						<tr>
-							<th scope="col">Kemasan</th>
-							<th scope="col">Unit</th>
-							<th scope="col">Harga</th>
-							<th scope="col">Stock</th>
-							<th scope="col">Jumlah Belanja</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Kg</td>
-							<td>RP. 50.000</td>
-							<td>150</td>
-							<td><input type="number" name="" class="form-control"></td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="text-center">
-					<a href="#" class="btn btn-secondary">Beli</a>
-				</div>
+				<form action="/produk" method="POST">
+					@csrf
+					<p class="tittle">Summerville</p>
+					<h2 class="fw-bold">{{ $produk->nama_product }}</h2>
+					<table class="table round">
+						<thead class="table-dark">
+							<tr>
+								<th scope="col">Kemasan</th>
+								<th scope="col">Unit</th>
+								<th scope="col">Harga</th>
+								<th scope="col">Stock</th>
+								<th scope="col">Jumlah Belanja</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>{{ $produk->unit }}</td>
+								<td>Rp {{ number_format($produk->harga) }}</td>
+								<td>{{$produk->stock}}</td>
+								<td>
+									<input type="number" name="jumlah" class="form-control">
+									<input type="number" name="id" class="form-control" value="{{$produk->id}}" hidden>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="text-center">
+						<button type="submit" class="btn btn-primary px-5">Beli</button>
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="row my-5">
@@ -54,19 +61,7 @@
 			</div>
 			<div class="col-md-6">
 				<h5 class="mb-2">Info Tambahan</h5>
-				<ul>
-					<li>1 ikat bayam merah berisi 15 batang (230-250 gram)</li>
-					<li>Penyimpanan di kulkas tahan 5-6 hari<br>
-					Penyimpanan di suhu ruangan tahan 3-4 hari</li>
-					<li>Manfaat bayam merah :
-						<ul>
-							<li>Meningkatkan kadar hemoglobin</li>
-							<li>Menjaga kadar gula darah</li>
-							<li>Tinggi antioksidan</li>
-							<li>Meningkatkan daya tahan tubuh</li>
-						</ul>
-					</li>
-				</ul>
+				{{ $produk->deskripsi }}
 			</div>
 		</div>
 	</div>
