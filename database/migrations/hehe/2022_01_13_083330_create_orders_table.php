@@ -17,10 +17,9 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->foreignId('product_id');
             $table->foreignId('user_id');
-            $table->integer('jumlah');
             $table->integer('total');
             $table->string('bukti_bayar')->default('None');
-            $table->integer('status')->default(1);
+            $table->integer('status');
             $table->timestamps();
         });
     }
