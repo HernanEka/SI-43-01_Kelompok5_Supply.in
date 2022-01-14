@@ -6,9 +6,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegistrasiController;
 use Illuminate\Support\Facades\Session;
-use App\Models\User;
+use App\Models\Product;
 
 
 /*
@@ -22,7 +23,10 @@ use App\Models\User;
 |
 */
 
-Route::resource('/', KategoriController::class);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/detail/{id}', [HomeController::class, 'detail']);
+Route::get('/cart', [HomeController::class, 'cart']);
+Route::post('/bayar/{id}', [HomeController::class, 'bayar']);
 
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
@@ -31,12 +35,8 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/register', [RegistrasiController::class, 'regis']);
 
 
-Route::get('/detail', function () {
-    return view('detail');
-});
 
-Route::get('/produk', [KategoriController::class, 'index']);
-Route::get('/produk/{produk:kategori}', [KategoriController::class, 'show']);
+Route::resource('/produk', KategoriController::class);
 
 
 

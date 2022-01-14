@@ -68,7 +68,7 @@
 		@yield('header')
 		<nav class="navbar navbar-expand-lg navbar-light">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="/"><img src="src/web-toolkit/logo.png" width="50" class="mx-3">Supply.in</a>
+				<a class="navbar-brand" href="/"><img src="{{ asset('src/web-toolkit/logo.png') }}" width="50" class="mx-3">Supply.in</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -88,7 +88,7 @@
 						</li>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+							<a href="/cart" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
 						</li>
 						<li class="nav-item">
 							<div class="dropdown">
@@ -141,10 +141,10 @@
 					</div>
 					<div class="col-md-4 me-4">
 						<h5>Metode Pembayaran</h5>
-						<p class="ms-3 fw-bold"><img src="src/web-toolkit/bank.png"></p>
+						<p class="ms-3 fw-bold"><img src="{{ asset('src/web-toolkit/bank.png') }}"></p>
 					</div>
 					<div class="col-md-2">
-						<img src="src/web-toolkit/orang.png" width="200">
+						<img src="{{ asset('src/web-toolkit/orang.png') }}" width="200">
 					</div>
 				</div>
 			</div>
