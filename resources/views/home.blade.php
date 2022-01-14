@@ -22,63 +22,63 @@
 <section id="pilihan">
 	<div class="container my-5">
 		<div class="row mb-3">
-			<div class="col-md-6">
-				<div class="p-3 bg-secondary round">
-					<div class="row">
-						<div class="col p-4">
-							<p class="text-start fw-bold" style="font-size:25px;">Fruit</p>
+			<div class="col-md-6 px-4">
+				<a href="/produk/fruit" style="text-decoration:none;">
+					<div class="row px-3 bg-kategori">
+						<div class="col p-3">
+							<p class="text-start fw-bold py-4 px-2" style="font-size:25px;">Fruit</p>
 						</div>
-						<div class="col pe-4">
-							<p class="text-end">
+						<div class="col p-3">
+							<p class="text-end px-2">
 								<img src="src/web-toolkit/fruit.png" class="img-fluid rounded-start">
 							</p>	
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
-			<div class="col-md-6">
-				<div class="p-3 bg-secondary round">
-					<div class="row">
-						<div class="col p-4">
-							<p class="text-start fw-bold" style="font-size:25px;">Vegetable</p>
+			<div class="col-md-6 px-4">
+				<a href="/vegetable" style="text-decoration:none;">
+					<div class="row px-3 bg-kategori">
+						<div class="col p-3">
+							<p class="text-start fw-bold py-4 px-2" style="font-size:25px;">Vegetable</p>
 						</div>
-						<div class="col pe-4">
-							<p class="text-end">
+						<div class="col p-3">
+							<p class="text-end px-2">
 								<img src="src/web-toolkit/vegetable.png" class="img-fluid rounded-start">
 							</p>	
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6">
-				<div class="p-3 bg-secondary round">
-					<div class="row">
-						<div class="col p-4">
-							<p class="text-start fw-bold" style="font-size:25px;">New Item</p>
+			<div class="col-md-6 px-4">
+				<a href="/new-item" style="text-decoration:none;">
+					<div class="row px-3 bg-kategori">
+						<div class="col p-3">
+							<p class="text-start fw-bold py-4 px-2" style="font-size:25px;">New Item</p>
 						</div>
-						<div class="col pe-4">
-							<p class="text-end">
+						<div class="col p-3">
+							<p class="text-end px-2">
 								<img src="src/web-toolkit/new-item.png" class="img-fluid rounded-start">
 							</p>	
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
-			<div class="col-md-6">
-				<div class="p-3 bg-secondary round">
-					<div class="row">
-						<div class="col p-4">
-							<p class="text-start fw-bold" style="font-size:25px;">Dairy Products</p>
+			<div class="col-md-6 px-4">
+				<a href="/dairy-product" style="text-decoration:none;">
+					<div class="row px-3 bg-kategori">
+						<div class="col p-3">
+							<p class="text-start fw-bold py-4 px-2" style="font-size:25px;">Dairy Product</p>
 						</div>
-						<div class="col pe-4">
-							<p class="text-end">
+						<div class="col p-3">
+							<p class="text-end px-2">
 								<img src="src/web-toolkit/dairy-product.png" class="img-fluid rounded-start">
 							</p>	
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -90,46 +90,23 @@
 	</div>
 	<div class="container-fluid pb-5 mb-5">
 		<div class="row-3 d-flex flex-lg-nowrap overflow-auto">
-			<div class="col-sm-3 p-3 mx-3 bg-light round">
-				<div class="card bg-light" style="border: none;">
-					<img src="src/web-toolkit/filler.png" class="card-img-top rounded-start" alt="...">
+			@foreach($produk as $data)
+			<div class="col-md-3 p-3 mx-3 bg-light round">
+				<div class="card h-100 bg-light" style="border: none;">
+					<div style="background-color: white; min-height: 300px;">
+						<img src="{{ asset('storage/'. $data->gambar) }}" class="card-img-top rounded-start" alt="...">
+					</div>
 					<div class="card-body">
-						<h5 class="card-title">Special title treatment</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="/detail" class="btn btn-primary">Go somewhere</a>
+						<h5 class="card-title text-center">{{ $data->nama_product }}</h5>
+						<p class="card-subtitle text-center">Rp {{ number_format($data->harga) }}/{{ $data->unit }}</p>.
+						<p class="card-text">{{Str::limit($data->deskripsi, 50)}}</p>
+					</div>
+					<div class="card-footer">
+						<a href="/detail" class="btn btn-primary w-100">Beli</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3 p-3 mx-3 bg-light round">
-				<div class="card bg-light" style="border: none;">
-					<img src="src/web-toolkit/filler.png" class="card-img-top rounded-start" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Special title treatment</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-3 p-3 mx-3 bg-light round">
-				<div class="card bg-light" style="border: none;">
-					<img src="src/web-toolkit/filler.png" class="card-img-top rounded-start" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Special title treatment</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-3 p-3 mx-3 bg-light round">
-				<div class="card bg-light" style="border: none;">
-					<img src="src/web-toolkit/filler.png" class="card-img-top rounded-start" alt="...">
-					<div class="card-body">
-						<h5 class="card-title">Special title treatment</h5>
-						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 </section>
@@ -157,12 +134,12 @@
 	</div>
 </section>
 <section id="Promo">
-	<div class="container my-5 py-5">
-		<p class="fw-bold">Promo</p>
+	<div class="container mt-5 pt-5">
+		<h5 class="fw-bold">Promo</h5>
 	</div>
-	<div class="ms-5">
-		<div class="row-3 d-flex flex-lg-nowrap overflow-auto">
-			<div class="col-sm-4 mx-3 bg-light round">
+	<div class="container-fluid">
+		<div class="row d-flex flex-lg-nowrap overflow-auto">
+			<div class="col-sm-4 mx-3">
 				<div class="card bg-secondary" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
@@ -172,7 +149,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4 mx-3 bg-secondary round">
+			<div class="col-sm-4 mx-3">
 				<div class="card bg-secondary" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
@@ -182,7 +159,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4 mx-3 bg-secondary round">
+			<div class="col-sm-4 mx-3">
 				<div class="card bg-secondary" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
@@ -192,7 +169,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4 mx-3 bg-secondary round">
+			<div class="col-sm-4 mx-3">
 				<div class="card bg-secondary" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
