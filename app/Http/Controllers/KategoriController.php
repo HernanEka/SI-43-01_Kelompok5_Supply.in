@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Order;
 
 
 class KategoriController extends Controller
@@ -15,8 +16,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $produk = Product::all();
-        return view('home', compact('produk'));
+        $produk = Product::orderBy('created_at', 'desc')->get();
+        return view('produk', compact('produk'));
     }
 
     /**
@@ -26,7 +27,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,8 +37,25 @@ class KategoriController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        $product_id = $request->id;
+
+        $user_id = session('id');
+        $produk = Product::find($product_id);
+        
+        $harga = $produk->harga;
+        $jumlah = $request->jumlah;
+
+        $total = $jumlah*$harga;
+
+        $order = new Order;
+        $order->product_id = $product_id;
+        $order->user_id = $user_id;
+        $order->jumlah = $jumlah;
+        $order->total = $total;
+        $order->save();
+
+        return redirect('/cart');
     }
 
     /**
@@ -47,8 +65,12 @@ class KategoriController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        $filter = Product::all();
+        $produk = $filter->where('kategori','=',$id);
+        // dd($filter);
+        return view('produk', compact('produk'));
+
     }
 
     /**
