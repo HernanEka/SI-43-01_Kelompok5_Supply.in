@@ -140,7 +140,7 @@
 	<div class="container-fluid">
 		<div class="row d-flex flex-lg-nowrap overflow-auto">
 			<div class="col-sm-4 mx-3">
-				<div class="card bg-secondary" style="border: none;">
+				<div class="card bg-light" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Special title treatment</h5>
@@ -150,7 +150,7 @@
 				</div>
 			</div>
 			<div class="col-sm-4 mx-3">
-				<div class="card bg-secondary" style="border: none;">
+				<div class="card bg-light" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Special title treatment</h5>
@@ -160,7 +160,7 @@
 				</div>
 			</div>
 			<div class="col-sm-4 mx-3">
-				<div class="card bg-secondary" style="border: none;">
+				<div class="card bg-light" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Special title treatment</h5>
@@ -170,7 +170,7 @@
 				</div>
 			</div>
 			<div class="col-sm-4 mx-3">
-				<div class="card bg-secondary" style="border: none;">
+				<div class="card bg-light" style="border: none;">
 					<img src="src/web-toolkit/promo.png" class="card-img-top rounded-start" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Special title treatment</h5>
@@ -192,16 +192,16 @@
 			<div class="col-md-7">
 				<p class="display-5"><b class="fw-bold">Why</b> Supply.in <b class="fw-bold">?</b></p>
 				<div class="py-5">
-					<div class="py-3 px-4 mb-4 display-6 round" style="background-color: #eee;">
+					<div class="py-3 px-4 mb-4 display-6 bg-hijau">
 						<i class="far fa-check-circle me-3"></i> Pemesanan Terjadwal
 					</div>
-					<div class="py-3 px-4 mb-4 display-6 round" style="background-color: #eee;">
+					<div class="py-3 px-4 mb-4 display-6 bg-hijau">
 						<i class="far fa-check-circle me-3"></i> On-time Delivery
 					</div>
-					<div class="py-3 px-4 mb-4 display-6 round" style="background-color: #eee;">
+					<div class="py-3 px-4 mb-4 display-6 bg-hijau">
 						<i class="far fa-check-circle me-3"></i> Grocery Stock Update
 					</div>
-					<div class="py-3 px-4 mb-4 display-6 round" style="background-color: #eee;">
+					<div class="py-3 px-4 mb-4 display-6 bg-hijau">
 						<i class="far fa-check-circle me-3"></i> Realtime Transaction
 					</div>
 				</div>

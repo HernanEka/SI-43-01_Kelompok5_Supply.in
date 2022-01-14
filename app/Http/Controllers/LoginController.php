@@ -38,7 +38,7 @@ class LoginController extends Controller
 
             if ($user->level == 2) {
 
-                return redirect('/admin');
+                return redirect('/admin/pesanan');
 
             }else{
 

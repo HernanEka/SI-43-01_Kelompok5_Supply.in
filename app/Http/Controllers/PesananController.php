@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Order;
 
 class PesananController extends Controller
 {
@@ -13,7 +14,9 @@ class PesananController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $order = Order::all();
+        $i = 1;
+        return view('admin.index', compact('order', 'i'));
     }
 
     /**
@@ -34,7 +37,7 @@ class PesananController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -68,7 +71,12 @@ class PesananController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $order = Order::find($id);
+
+        $order->status = $request->status;
+        $order->save();
+
+        return redirect('/admin/pesanan');
     }
 
     /**

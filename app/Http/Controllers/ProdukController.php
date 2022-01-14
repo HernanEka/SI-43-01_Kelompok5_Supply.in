@@ -73,7 +73,7 @@ class ProdukController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -85,7 +85,19 @@ class ProdukController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $produk = Product::find($id);
+        $produk->nama_product = $request->nama_product;
+        $produk->deskripsi = $request->deskripsi;
+        $produk->harga = $request->harga;
+        $produk->stock = $request->stock;
+        $produk->unit = $request->unit;
+        $produk->kategori = $request->kategori;
+        $produk->gambar = $request->file('gambar')->store('foto-product');
+        
+        $produk->save();
+
+        return redirect('/admin/produk');
+
     }
 
     /**
@@ -96,6 +108,12 @@ class ProdukController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $produk = Product::find($id);
+
+        Storage::delete($produk->image);
+
+        $produk->delete();
+
+        return redirect('/admin/produk');
     }
 }

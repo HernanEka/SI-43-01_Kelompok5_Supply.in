@@ -16,6 +16,22 @@
 
 		<style type="text/css">
 			
+			.text-hijau{
+				color: #29D636;
+			}
+
+			.bg-hijau{
+				background-color: #29D636;
+				border-radius: 20px;
+				color: #fff;
+			}
+
+			.btn-hijau{
+				background-color: #29D636;
+				border-radius: 10px;
+				color: #fff;
+			}
+
 			#Login{
 
 				background: url('src/web-toolkit/bg-login.png');
@@ -42,16 +58,24 @@
 			}
 
 			a div.bg-kategori{
-				background-color: #ddd;
+				background-color: #29D636;
 				border-radius: 20px;
 				color: #111;
 			}
 
 			a div.bg-kategori:hover{
-				background-color: #ccc;
+				background-color: #25C303;
 				border-radius: 20px;
 				color: #111;
 				transition-duration: 0.7s;
+			}
+			.btn-primary {
+				background-color: #FA380C;
+				border: 0px;
+			}
+			.btn-primary:hover {
+				background-color: #b20607;
+				border: 0px;
 			}
 
 			
@@ -77,23 +101,23 @@
 						<li class="nav-item">
 							<form class="d-flex p-1 bg-light search">
 								<input class="form-control search bg-light" type="search" placeholder="Search" aria-label="Search">
-								<button class="btn" type="submit"><i class="fas fa-search"></i></button>
+								<button class="btn" type="submit"><i class="fas fa-search text-hijau"></i></button>
 							</form>
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a href="#" class="nav-link"><i class="fas fa-map-marker-alt"></i></a>
+						</li> -->
 						@auth
-						</li>
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a href="#" class="nav-link"><i class="far fa-heart"></i></a>
-						</li>
+						</li> -->
 						</li>
 						<li class="nav-item">
-							<a href="/cart" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+							<a href="/cart" class="nav-link"><i class="fas fa-shopping-cart text-hijau"></i></a>
 						</li>
 						<li class="nav-item">
 							<div class="dropdown">
-								<a class="nav-link btn btn-primary text-light" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-									<i class="far fa-user"></i>
+								<a class="nav-link btn btn-dark text-light" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="far fa-user text-hijau"></i>
 									@if(session()->has('id'))
 									
 									Hallo, {{ session('nama') }} 
@@ -109,7 +133,7 @@
 						<li class="nav-item">
 							<div class="dropdown">
 								<a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-									<i class="far fa-user"></i>
+									<i class="far fa-user text-hijau"></i>
 								</a>
 
 								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
@@ -149,7 +173,7 @@
 				</div>
 			</div>
 
-			<footer class="bg-light py-3">
+			<footer class="bg-hijau py-3" style="border-radius: 0px;">
 				<div class="text-center">
 					© Copyright 2021 Supply.in semua hak cipta terlindungi
 				</div>

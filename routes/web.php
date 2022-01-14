@@ -41,7 +41,7 @@ Route::resource('/produk', KategoriController::class);
 
 
 Route::prefix('/admin')->group(function () {
-    Route::resource('/', PesananController::class);
+    Route::resource('/pesanan', PesananController::class);
     Route::resource('/produk', ProdukController::class);
     Route::resource('/user', UserController::class);
 });

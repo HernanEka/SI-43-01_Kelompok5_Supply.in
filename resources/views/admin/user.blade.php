@@ -15,7 +15,6 @@
 				<th scope="col">No Handphone</th>
 				<th scope="col">Alamat</th>
 				<th scope="col">Level</th>
-				<th scope="col">Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -33,10 +32,6 @@
 					@else
 					User
 					@endif
-				</td>
-				<td>
-					<a href="#" class="btn btn-warning">Edit</a>
-					<a href="#" class="btn btn-danger">Delete</a>
 				</td>
 			</tr>
 			@endforeach
